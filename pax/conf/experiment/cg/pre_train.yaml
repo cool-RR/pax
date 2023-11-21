@@ -1,8 +1,8 @@
 # @package _global_
-# As of Oct 25, 2022, this file is deprecated. 
-seed: 1323 
+# As of Oct 25, 2022, this file is deprecated.
+seed: 1323
 
-# Agents  
+# Agents
 agent1: 'PPO_memory_pretrained'
 agent2: 'Tabular'
 
@@ -13,20 +13,20 @@ egocentric: True
 env_discount: 0.96
 payoff: [[1, 1, -2], [1, 1, -2]]
 
-# Runner 
+# Runner
 runner: rl
 
 # Training
-num_envs: 100 # Training requires 10000 
+num_envs: 100 # Training requires 10000
 num_opps: 1
 num_outer_steps: 1
-num_inner_steps: 16 
+num_inner_steps: 16
 num_iters: 10000
-save_interval: 100  
+save_interval: 100
 
-# Evaluation 
- 
-# PPO RNN pretrained against GREEDY 
+# Evaluation
+
+# PPO RNN pretrained against GREEDY
 # run_path: ucl-dark/cg/2f559x4o
 # model_path: exp/sanity-PPO_memory-vs-GoodGreedy-parity/run-seed-0/2022-09-13_21.10.54.299490/iteration_900
 
@@ -68,7 +68,7 @@ model_path: exp/EARL-PPO_memory-vs-PPO_memory/run-seed-0/2022-09-28_01.58.33.843
 # PPO agent parameters
 ppo:
   num_minibatches: 8
-  num_epochs: 2 
+  num_epochs: 2
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -91,7 +91,7 @@ ppo:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: cg
   group: '${env_id}-${agent1}-vs-${agent2}-parity'
   name: run-seed-${seed}

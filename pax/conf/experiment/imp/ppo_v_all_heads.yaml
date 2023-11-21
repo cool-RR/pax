@@ -47,7 +47,7 @@ ppo_default:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: mp
   group: 'PPO-vs-${agent2}-mp-parity'
   name: run-seed-${seed}

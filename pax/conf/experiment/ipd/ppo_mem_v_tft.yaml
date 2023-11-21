@@ -1,6 +1,6 @@
 # @package _global_
 
-# Agents  
+# Agents
 agent1: 'PPO_memory'
 agent2: 'TitForTat'
 
@@ -13,7 +13,7 @@ payoff: [[-1,-1], [-3,0], [0,-3], [-2,-2]]
 # Runner
 runner: rl
 
-# Runner 
+# Runner
 evo: False
 eval: False
 # Training hyperparameters
@@ -30,7 +30,7 @@ save_interval: 1
 # PPO agent parameters
 ppo1:
   num_minibatches: 4
-  num_epochs: 2 
+  num_epochs: 2
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -50,7 +50,7 @@ ppo1:
 
 ppo2:
   num_minibatches: 4
-  num_epochs: 2 
+  num_epochs: 2
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -70,7 +70,7 @@ ppo2:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: ipd
   group: 'PPO_memory-vs-${agent2}-parity'
   name: run-seed-${seed}

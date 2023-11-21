@@ -1,6 +1,6 @@
 # @package _global_
 
-# Agents  
+# Agents
 agent1: 'PPO_memory'
 agent2: 'Tabular'
 
@@ -10,7 +10,7 @@ env_type: meta
 env_discount: 0.96
 payoff: [[1, -1], [-1, 1], [-1, 1], [1, -1]]
 
-# Runner 
+# Runner
 runner: evo
 
 # Training
@@ -18,26 +18,26 @@ top_k: 5
 popsize: 1000
 num_envs: 2
 num_opps: 1
-num_steps: 10_000 
-num_inner_steps: 100 
+num_steps: 10_000
+num_inner_steps: 100
 num_iters: 5000
 num_devices: 1
 
-# Evaluation 
+# Evaluation
 num_seeds: 20
-# seed = 0 
+# seed = 0
 # run_path: ucl-dark/mp/36w1tuju
 # model_path:  exp/GS-PPO_memory-vs-Tabular/run-seed-0-pop-size-1000/2022-09-25_15.52.33.707967/generation_4900
-# seed = 1 
+# seed = 1
 # run_path: ucl-dark/mp/3074jksy
 # model_path: exp/GS-PPO_memory-vs-Tabular/run-seed-1-pop-size-1000/2022-09-25_15.53.12.637138/generation_4900
 # seed = 2
 # run_path: ucl-dark/mp/1h18aq5c
 # model_path: exp/GS-PPO_memory-vs-Tabular/run-seed-2-pop-size-1000/2022-09-25_15.53.49.913885/generation_4900
-# seed = 3 
+# seed = 3
 # run_path: ucl-dark/mp/3ew2bidu
 # model_path: exp/GS-PPO_memory-vs-Tabular/run-seed-3-pop-size-1000/2022-09-25_15.54.11.059838/generation_4900
-# seed = 4 
+# seed = 4
 run_path: ucl-dark/mp/glpfg7zd
 model_path: exp/GS-PPO_memory-vs-Tabular/run-seed-4-pop-size-1000/2022-09-25_15.55.16.444095/generation_4900
 
@@ -49,7 +49,7 @@ ppo:
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
   value_coeff: 0.5
-  clip_value: True 
+  clip_value: True
   max_gradient_norm: 0.5
   anneal_entropy: False
   entropy_coeff_start: 0.02
@@ -61,7 +61,7 @@ ppo:
   with_memory: True
   with_cnn: False
 
-# Naive Learner parameters 
+# Naive Learner parameters
 naive:
   num_minibatches: 1
   num_epochs: 1
@@ -71,8 +71,8 @@ naive:
   learning_rate: 1.0
   adam_epsilon: 1e-5
 
-# ES parameters 
-es: 
+# ES parameters
+es:
   algo: OpenES        # [OpenES, CMA_ES]
   sigma_init: 0.04    # Initial scale of isotropic Gaussian noise
   sigma_decay: 0.999  # Multiplicative decay factor
@@ -88,13 +88,13 @@ es:
   beta_2: 0.999       # Adam - beta_2
   eps: 1e-8           # eps constant,
   centered_rank: False     # Fitness centered_rank
-  w_decay: 0        # Decay old elite fitness 
-  maximise: True      # Maximise fitness 
-  z_score: True      # Normalise fitness 
+  w_decay: 0        # Decay old elite fitness
+  maximise: True      # Maximise fitness
+  z_score: True      # Normalise fitness
   mean_reduce: True    # Remove mean
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: mp
   group: '${agent1}-vs-${agent2}'
   name: run-seed-${seed}-pop-size-${popsize}

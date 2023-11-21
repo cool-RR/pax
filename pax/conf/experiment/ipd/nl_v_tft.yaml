@@ -1,6 +1,6 @@
 # @package _global_
 
-# Agents  
+# Agents
 agent1: 'Naive'
 agent2: 'TitForTat'
 
@@ -36,7 +36,7 @@ naive:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: ipd
   group: 'Naive-vs-${agent2}-parity'
   name: run-seed-${seed}

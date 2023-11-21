@@ -1,6 +1,6 @@
 # @package _global_
 
-# Agents  
+# Agents
 agent1: 'PPO_memory'
 agent2: 'GoodGreedy'
 
@@ -11,26 +11,26 @@ egocentric: True
 env_discount: 0.96
 payoff: [[1, 1, -2], [1, 1, -2]]
 
-# Runner 
+# Runner
 runner: rl
 
 # env_batch_size = num_envs * num_opponents
 num_envs: 250
 num_opps: 1
 num_outer_steps: 1
-num_inner_steps: 16 
+num_inner_steps: 16
 num_iters: 2.5e3
-save_interval: 0.1 
+save_interval: 0.1
 
-# Evaluation 
- 
+# Evaluation
+
 run_path: ucl-dark/cg/12auc9um
 model_path: exp/sanity-PPO-vs-PPO-parity/run-seed-0/2022-09-08_20.04.17.155963/iteration_500
 
 # PPO agent parameters
 ppo1:
   num_minibatches: 8
-  num_epochs: 2 
+  num_epochs: 2
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -53,7 +53,7 @@ ppo1:
 
 ppo2:
   num_minibatches: 8
-  num_epochs: 2 
+  num_epochs: 2
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -76,7 +76,7 @@ ppo2:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: cg
   group: 'sanity-${agent1}-vs-${agent2}-parity'
   name: run-seed-${seed}

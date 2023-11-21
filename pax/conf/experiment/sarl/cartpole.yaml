@@ -61,7 +61,7 @@ ppo0:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: synq
   group: 'sanity-${agent1}-vs-${agent2}-parity'
   name: run-seed-${seed}

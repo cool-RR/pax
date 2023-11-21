@@ -1,6 +1,6 @@
 # @package _global_
 
-# Agents  
+# Agents
 agent1: 'LOLA'
 agent2: 'PPO'
 
@@ -23,8 +23,8 @@ num_inner_steps: 100 # how long a game takes
 num_iters: 1000
 
 # LOLA agent parameters
-lola: 
-  use_baseline: True   
+lola:
+  use_baseline: True
   adam_epsilon: 1e-5
   lr_out: 0.1
   gamma: 0.96
@@ -32,7 +32,7 @@ lola:
 
 ppo1: # TODO unsure if I need ppo1 or ppo2 if second agent is ppo
   num_minibatches: 10
-  num_epochs: 4 
+  num_epochs: 4
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -52,7 +52,7 @@ ppo1: # TODO unsure if I need ppo1 or ppo2 if second agent is ppo
 
 ppo2:
   num_minibatches: 10
-  num_epochs: 4 
+  num_epochs: 4
   gamma: 0.96
   gae_lambda: 0.95
   ppo_clipping_epsilon: 0.2
@@ -73,8 +73,8 @@ ppo2:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: tensor-ipd
   group: 'test'
   name: 'LOLA-vs-${agent2}'
-  log: True 
+  log: True

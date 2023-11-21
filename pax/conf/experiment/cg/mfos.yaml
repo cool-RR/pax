@@ -100,7 +100,7 @@ es:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: cg
   group: 'mfos-${agent1}-vs-${agent2}-parity'
   name: run-seed-${seed}

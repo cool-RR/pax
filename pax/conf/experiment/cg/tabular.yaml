@@ -82,7 +82,7 @@ naive:
 
 # Logging setup
 wandb:
-  entity: "ucl-dark"
+  entity: "coolrr-team"
   project: cg
   group: 'sanity-${agent1}-vs-${agent2}-parity'
   name: run-seed-${seed}
