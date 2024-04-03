@@ -2,8 +2,8 @@ absl-py
 black
 chex
 distrax
-dm-haiku
-dm-tree
+#dm-haiku
+#dm-tree
 evosax
 flax
 gymnax

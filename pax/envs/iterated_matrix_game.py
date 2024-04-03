@@ -77,6 +77,8 @@ class IteratedMatrixGame(environment.Environment):
             outer_t = jax.lax.select(reset_inner, outer_t_new, outer_t)
             reset_outer = outer_t == num_outer_steps
             state = EnvState(inner_t=inner_t, outer_t=outer_t)
+            # jax.debug.breakpoint()
+            # jax.debug.print('ZABI {obs1} {obs2}', obs1=obs1, obs2=obs2)
             return (
                 (obs1, obs2),
                 state,
@@ -97,6 +99,7 @@ class IteratedMatrixGame(environment.Environment):
 
         # overwrite Gymnax as it makes single-agent assumptions
         self.step = jax.jit(_step)
+        # self.step = _step # Temp hack, delete this
         self.reset = jax.jit(_reset)
 
     @property
